@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../assets/lib/normalize.css">
+    <title>Case_01</title>
+
+    <style>
+        nav{
+            height: 100vh;
+            width: 60px;
+            padding: 0;
+            align-content: center;
+        }
+        nav>div{
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            border: 2px solid black;
+            background-color: rebeccapurple;
+            color: white;
+            font-weight: bold;
+            position: relative;
+            margin-bottom: 10px;
+            margin-top: 20px;
+            margin-left: -110px;
+            cursor: pointer;
+            box-shadow: mediumpurple 5px 5px 5px;
+
+            transition-property: transform;
+            transition-duration: 1s;
+            transition-timing-function: ease-out;
+        }
+        nav>div:hover{
+            transform: translateX(90px);
+        }
+    </style>
+</head>
+<body>
+  <nav>
+    <div><span>Menu One</span><i class="fa-solid fa-address-book"></i></div>
+    <div><span>Menu Two</span><i class="fa-solid fa-truck-medical"></i></div>
+    <div><span>Menu Three</span><i class="fa-solid fa-book-atlas"></i></div>
+    <div><span>Menu Four</span><i class="fa-solid fa-paper-plane"></i></div>
+      <div><span>Menu Five</span><i class="fa-solid fa-cart-plus"></i></div>
+  </nav>
+</body>
+</html>

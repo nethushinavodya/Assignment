@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../assets/lib/normalize.css">
+    <title>Case_02</title>
+
+    <style>
+        div{
+            width: 5px;
+            aspect-ratio: 1/1;
+            border:2px solid #ff0000;
+            position: absolute;
+            border-radius: 100%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+
+            animation: droplet 3s infinite;
+        }
+        @keyframes droplet {
+           from{
+               width: 5px;
+           }
+           to{
+               width: 300px;
+               opacity: 0;
+           }
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

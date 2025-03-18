@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/lib/normalize.css">
+    <title>Case_05</title>
+
+    <style>
+        :root{
+            --section-width: 700px;
+            --section-height: 400px;
+        }
+        section{
+            width: var(--section-width);
+            height: var(--section-height);
+            border: 5px solid red;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+
+        }
+        section>div{
+            width: var(--section-width);
+            height: var(--section-height);
+            position: absolute;
+            display: flex;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+
+
+        }
+        section>div>img{
+            width: var(--section-width);
+            height: var(--section-height);
+
+            animation-name: image-slide;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+        section>div>img:nth-child(2){
+            animation-delay: 1s;
+        }
+        section>div>img:nth-child(3){
+            animation-delay: 2s;
+        }
+        section>div>img:nth-child(4){
+            animation-delay: 3s;
+        }
+        @keyframes image-slide {
+            0%, 20% {
+                transform: translate(0%);
+            }
+
+            25%, 45% {
+                transform: translate(-25%);
+            }
+
+            50%, 70% {
+                transform: translate(-50%);
+            }
+
+            75% {
+                transform: translate(-75%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <div><img src="../assets/images/slide1.jpeg" ></div>
+            <div><img src="../assets/images/slide2.jpeg"></div>
+            <div><img src="../assets/images/slide3.jpeg"></div>
+            <div><img src="../assets/images/slide4.jpeg"></div>
+        </section>
+    </main>
+</body>
+
+</html>
