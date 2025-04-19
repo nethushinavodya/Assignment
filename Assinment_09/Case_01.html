@@ -2,9 +2,100 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Assignment_09 Case_01</title>
+    <title>JavaScript Knight Rider</title>
+    <style>
+        body {
+            background-color: #000000;
+            text-align: center;
+            color: #ff6666;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #ff6666;
+            margin-bottom: 20px;
+        }
+        section {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            margin: 20px auto;
+            border-top: 1px solid #666;
+            border-bottom: 1px solid #666;
+            padding: 10px 0;
+        }
+        .box {
+            width: 100px;
+            height: 50px;
+            margin: 5px;
+            background-color: white;
+            border-radius: 10px;
+            border: 2px solid #ff6262;
+            transition: background-color 0.3s ease;
+        }
+        input {
+            margin: 10px;
+            padding: 10px 20px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #start {
+            background-color: #4197ff;
+        }
+        #start:hover {
+            background-color: #0a00ff;
+        }
+        #stop {
+            background-color: #ff8686;
+        }
+        #stop:hover {
+            background-color: #ff0000;
+        }
+    </style>
 </head>
 <body>
+<section id="Boxes">
+    <h1>JavaScript Knight Rider</h1>
+    <div class="container">
+        <div id="first" class="box"></div>
+        <div id="second" class="box"></div>
+        <div id="third" class="box"></div>
+        <div id="fourth" class="box"></div>
+        <div id="fifth" class="box"></div>
+        <div id="sixth" class="box"></div>
+        <div id="seventh" class="box"></div>
+    </div>
+    <input id="start" type="button" value="Start">
+    <input id="stop" type="button" value="Stop">
+</section>
 
+<script>
+    let colors = ["#ff0000", "#ff8000", "#ffff00", "#80ff00", "#00ff00", "#00ff80", "#00ffff", "#0080ff", "#0000ff", "#8000ff", "#ff00ff", "#ff0080"];
+    let boxes = document.querySelectorAll(".box");
+    let start = document.getElementById("start");
+    let stop = document.getElementById("stop");
+
+    start.addEventListener("click", () => {
+        let interval = setInterval(() => {
+            let color = colors.pop();
+            colors.unshift(color);
+            boxes.forEach((box, index) => {
+                box.style.backgroundColor = colors[index];
+            });
+        }, 100);
+        stop.addEventListener("click", () => {
+            clearInterval(interval);
+        });
+    });
+</script>
 </body>
 </html>
