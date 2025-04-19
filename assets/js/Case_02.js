@@ -9,4 +9,4 @@ setInterval(() => {
     document.getElementById("fourth").style.backgroundColor = colours[3];
     document.getElementById("fifth").style.backgroundColor = colours[4];
     document.getElementById("last").style.backgroundColor = colours[5];
-}, 2000);
+}, 1000);
