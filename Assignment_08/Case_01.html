@@ -3,8 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>Assignment_08 Case_01</title>
+    <link rel="stylesheet" href="../assets/lib/normalize.css">
+    <style>
+        section{
+            display: flex;
+        }
+        section>div{
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #00b2ff;
+            border: 2px solid black;
+            margin: 20px;
+        }
+        section div h1{
+            margin: auto;
+        }
+    </style>
 </head>
 <body>
+    <section>
+        <div><h1 id="one">A</h1></div>
+        <img src="../assets/images/bear2.gif" width="150" alt="">
+        <div><h1 id="two">B</h1></div>
+        <img src="../assets/images/bear2.gif" width="150" alt="">
+        <div><h1 id="three">C</h1></div>
+        <img src="../assets/images/bear2.gif" width="150" alt="">
+        <div><h1 id="four">D</h1></div>
+        <img src="../assets/images/bear2.gif" width="150" alt="">
+        <div><h1 id="five">E</h1></div>
+        <img src="../assets/images/bear2.gif" width="150" alt="">
+        <div><h1 id="six">F</h1></div>
+    </section>
+        <div id="line"></div>
+    <script>
+        let array = ["A", "B", "C", "D", "E", "F"];
 
+        setInterval(() => {
+            let last = array.pop();
+            array.unshift(last);
+            document.getElementById("one").innerText = array[0];
+            document.getElementById("two").innerText = array[1];
+            document.getElementById("three").innerText = array[2];
+            document.getElementById("four").innerText = array[3];
+            document.getElementById("five").innerText = array[4];
+            document.getElementById("six").innerText= array[5];
+        }, 3000);
+    </script>
 </body>
 </html>
